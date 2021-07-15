@@ -69,7 +69,8 @@ var [{
 }] = suspects
 console.log(first, sec)
 
-// for each
+// for each 
+//  THIS IS MAPPP , "EACH" NOT RETURN ANYTHINGGGGG!
 const arr = ["A", "B", "X"]
 const obj_A = {
         A: "HI",
@@ -80,8 +81,35 @@ const obj_A = {
     //     console.log(val + " 5555");
     // })
 
+console.log("FOR EACH")
 const _ = {}
 _.each = function(list, callback) {
+
+    if (Array.isArray(list)) {
+        for (let i = 0; i < list.length; i++) {
+            callback(list[i])
+        }
+    }
+
+    if (!Array.isArray(list)) {
+        for (const properties in list) {
+            callback(list[properties])
+        }
+    }
+
+}
+
+_.each(arr, function(val) {
+    console.log("EEE" + val + "444")
+})
+
+_.each(obj_A, function(val) {
+    console.log("EEE" + val + "444")
+})
+
+
+console.log("MAPPP")
+_.map = function(list, callback) {
 
     if (Array.isArray(list)) {
         let result = []
@@ -101,10 +129,10 @@ _.each = function(list, callback) {
 
 }
 
-console.log(_.each(arr, function(val) {
+console.log(_.map(arr, function(val) {
     return val + "444"
 }))
 
-console.log(_.each(obj_A, function(val) {
+console.log(_.map(obj_A, function(val) {
     return val + "444"
 }))
