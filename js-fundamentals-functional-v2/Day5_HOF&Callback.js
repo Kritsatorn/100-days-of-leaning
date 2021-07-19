@@ -24,3 +24,25 @@ const logFalse = () => {
     console.log("False");
 }
 ifElse(false, logTrue, logFalse)
+
+const _ = {}
+_.reduce = (list, callbacks, initial) => {
+    if (Array.isArray(list) === true) {
+        let acc = initial;
+        list.forEach(data => {
+            acc += callbacks(data);
+        })
+        return acc;
+    }
+    if (Array.isArray(list) === false) {
+        let acc = initial
+        list.forEach(data => callbacks(data, acc))
+        return acc
+    }
+
+}
+const arr = [1, 23, 45, 9];
+const res = _.reduce(arr, (val) => {
+    return val + 1
+}, 0)
+console.log(res)
