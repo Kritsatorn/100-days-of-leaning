@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-// Combinational Sum
+// Combinational Sum but you can count with ur hands HAHAHA
 
 int main()
 {
