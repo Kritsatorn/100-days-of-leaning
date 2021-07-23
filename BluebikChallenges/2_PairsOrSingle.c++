@@ -1,9 +1,7 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-// explain
-//  one person have 2 diff ways
-// one is single  =  fn(n-1) ways exple  {1 ,2 3, 4, 5 }
+
 int mem[1000];
 int dp(int N)
 {
@@ -17,6 +15,6 @@ int main()
 {
   int N = 5;
   // cin >> N ;
-  cout << dp(N) << "\n";
+  cout << "There are " << dp(N) << " diferent ways\n";
   return 0;
 }
