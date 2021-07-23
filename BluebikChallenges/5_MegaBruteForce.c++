@@ -7,7 +7,6 @@ bool Sol(int n)
   int ten = 10;
   for (int i = 1; i <= 4 && n > 0; i++, n /= 10)
   {
-    // cout << n % 10 << endl;
     if (i % 2 == 0)
       sumEven += n % 10;
     if (i % 2 != 0)
@@ -17,12 +16,14 @@ bool Sol(int n)
 }
 int main()
 {
-  // Cal(1011);
   int count = 0;
   for (int i = 0; i <= 9999; i++)
     if (Sol(i))
+    {
+      // cout << i << endl;
       count++;
+    }
+
   cout << count << endl;
-  // printf("%d\n", i);
   return 0;
 }
